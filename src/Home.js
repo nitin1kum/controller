@@ -3,7 +3,7 @@ import "./App.css";
 import { a } from "react-router-dom";
 
 const Home = () => {
-  const [ip, setIp] = useState("");
+  const [ip, setIp] = useState("192.168.89.157");
   const [button, setButton] = useState({
     ip: "",
   });
@@ -30,14 +30,14 @@ const Home = () => {
           </form>
           <div className="controller-button">
             <a
-              href={`http://${ip}/forward`}
+              href={`http://${ip}/backward`}
               onClick={(event) => setIp(button.ip)}
             >
               <button className="up">up</button>
             </a>
             <div className="left-right">
               <a
-                href={`http://${ip}/left`}
+                href={`http://${ip}/right`}
                 onClick={(event) => setIp(button.ip)}
               >
                 <button>left</button>
@@ -49,14 +49,14 @@ const Home = () => {
                 <button>stop</button>
               </a>
               <a
-                href={`http://${ip}/right`}
+                href={`http://${ip}/left`}
                 onClick={(event) => setIp(button.ip)}
               >
                 <button>right</button>
               </a>
             </div>
             <a
-              href={`http://${ip}/backward`}
+              href={`http://${ip}/forward`}
               onClick={(event) => setIp(button.ip)}
             >
               <button className="down">down</button>
