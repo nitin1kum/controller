@@ -39,6 +39,7 @@ text-transform: capitalize;
   margin: auto;
   height: min-content;
   width: 100%;
+  padding: 2rem 0;
 }
 #speed{
   width: 100%;
